@@ -68,6 +68,8 @@ start_date = st.date_input("Start Date", value=default_start_date)
 end_date = st.date_input("End Date", value=default_end_date)
 
 
+
+
 # Fetch historical data
 btc_data = get_historical_data("BTC-USD", start_date, end_date)
 
@@ -135,7 +137,10 @@ st.plotly_chart(fig)
 st.markdown("### Returns DataFrame")
 st.dataframe(returns_df)
 
-
+st.markdown("### Debugging Information")
+st.write("Start Date:", start_date)
+st.write("End Date:", end_date)
+st.write("BTC Data:", btc_data.head())
 
 # Use Local CSS File
 def local_css(file_name):
