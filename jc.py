@@ -5,13 +5,6 @@ import pandas as pd
 import ephem
 from datetime import datetime, timedelta
 
-
-# page_title = "Financial Portfolio Optimizer"
-# page_icon = ":zap:"  # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
-# layout = "centered"
-
-# st.set_page_config(page_title = page_title, layout = layout, page_icon = page_icon)
-# st.title(page_title + " " + page_icon)
 page_title = "Lunar Lotto"
 page_icon = "🌖"  # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config( page_icon = page_icon)
@@ -27,12 +20,6 @@ hide_st_style = """
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
-
-
-# # Function to fetch historical price data
-# def get_historical_data(ticker, start_date, end_date):
-#     data = yf.download(ticker, start=start_date, end=end_date)
-#     return data
 
 # Function to fetch historical price data
 def get_historical_data(ticker, start_date, end_date):
@@ -66,8 +53,6 @@ default_start_date = (datetime.today() - timedelta(days=365)).date()
 # Input date range
 start_date = st.date_input("Start Date", value=default_start_date)
 end_date = st.date_input("End Date", value=default_end_date)
-
-
 
 
 # Fetch historical data
