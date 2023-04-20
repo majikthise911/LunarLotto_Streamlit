@@ -127,3 +127,22 @@ st.plotly_chart(fig)
 # Display the returns DataFrame
 st.markdown("### Returns DataFrame")
 st.dataframe(returns_df)
+
+
+
+# Use Local CSS File
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+
+local_css("style/style.css")
+
+st.markdown( ''' Made with 👾 by Jordan Clayton
+
+[LinkedIn](https://www.linkedin.com/in/jordan-clayton/)
+[Twitter](https://twitter.com/JordanJClayton2)
+[Telegram](https://t.me/jordan_clayton)
+''', unsafe_allow_html=True)
+
+st.markdown( ''' Also, check out my other projects and give them a follow and a star if they deserve it: [GitHub](https://github.com/majikthise911)''', unsafe_allow_html=True)
