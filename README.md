@@ -35,7 +35,7 @@ pip install -r requirements.txt
 4. Run the Streamlit app:
 
 ```
-streamlit run app.py
+streamlit run jc.py
 ```
 
 The app will open in your default browser.
