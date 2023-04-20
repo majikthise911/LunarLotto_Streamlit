@@ -29,8 +29,15 @@ hide_st_style = """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
 
+# # Function to fetch historical price data
+# def get_historical_data(ticker, start_date, end_date):
+#     data = yf.download(ticker, start=start_date, end=end_date)
+#     return data
+
 # Function to fetch historical price data
 def get_historical_data(ticker, start_date, end_date):
+    start_date = pd.to_datetime(start_date).tz_localize('UTC')
+    end_date = pd.to_datetime(end_date).tz_localize('UTC')
     data = yf.download(ticker, start=start_date, end=end_date)
     return data
 
